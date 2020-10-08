@@ -204,6 +204,7 @@ class _LoginPageState extends State<LoginPage> {
       text: TextSpan(
           text: 'AD',
           style: GoogleFonts.portLligatSans(
+            // ignore: deprecated_member_use
             textStyle: Theme.of(context).textTheme.display1,
             fontSize: 30,
             fontWeight: FontWeight.w700,
