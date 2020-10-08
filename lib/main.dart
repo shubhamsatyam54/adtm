@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'src/welcomePage.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp1());
@@ -42,29 +41,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    Widget _title() {
-      return RichText(
-        textAlign: TextAlign.center,
-        text: TextSpan(
-            text: 'AD',
-            style: GoogleFonts.portLligatSans(
-              textStyle: Theme.of(context).textTheme.display1,
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-              color: Colors.white,
-            ),
-            children: [
-              TextSpan(
-                text: 't',
-                style: TextStyle(color: Colors.black, fontSize: 30),
-              ),
-              TextSpan(
-                text: 'M',
-                style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
-            ]),
-      );
-    }
 
     return new SplashScreen(
         seconds: 5,
@@ -73,37 +49,13 @@ class _MyAppState extends State<MyApp> {
           style: new TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 50.0,
-              color:Colors.deepOrange
+              color:Colors.redAccent
 
           ),),
         backgroundColor: Colors.white,
         styleTextUnderTheLoader: new TextStyle(),
 
         loaderColor: Colors.white
-    );
-  }
-}
-
-
-
-
-class AfterSplash extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-          title: new Text("ADTM Login"),
-          automaticallyImplyLeading: false,
-        centerTitle: true,
-      ),
-      body: new Center(
-        child: new Text("Done!",
-          style: new TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 30.0
-          ),),
-
-      ),
     );
   }
 }
